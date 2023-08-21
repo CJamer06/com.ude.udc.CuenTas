@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap" rel="stylesheet">
+    <title>CuenTas</title>
+</head>
+<style>
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Bree Serif', serif;
+}
+
+h1{
+    font-weight: 500px;
+    font-size: 3rem;
+}
+
+.navbar {
+    border: 1px solid gray;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.button-1{
+    text-decoration: none;
+    color: #0A4E65;
+    background-color: #9BEABD;
+    padding: 10px 20px;
+    border-radius: 10px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.button-2{
+    text-decoration: none;
+    color: #0A4E65;
+    background-color: #F9BF84;
+    padding: 10px 20px;
+    border-radius: 10px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.item {
+    text-decoration: none;
+    color: #0A4E65;
+    padding: 10px 20px;
+    border-radius: 10px;
+    transition: background-color 0.5s ease-in-out;
+}
+
+.content {
+    padding: 40px;
+    text-align: center;
+}
+
+.footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.nav-button {
+    display: flex;
+    list-style: none;
+    gap: 10px;
+}
+
+.nav-button li a:hover {
+    background-color: #0A4E65;
+    color: #fff;
+}
+
+.hidden-text {
+    display: none;
+}
+
+/* Son Las Tarjetas de información y como se comportan */
+
+@media screen and (min-width: 720px) {
+    .card {
+        background-color: #f1f1f1;
+        padding: 20px;
+        margin: 10px;
+        border-radius: 5px;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: transform 0.3s ease-in-out, background-color 0.5s ease-in-out; /* Agregamos background-color */
+    }
+
+    .card h2 {
+        margin:1px;
+    }
+
+    .cards-box {
+        display:flex;
+        justify-content: center;
+    }
+
+    .card:hover{
+        transform: scale(1.05);
+        position: fixed;
+        background-color: rgb(20, 189, 235, 95%);
+        font-size: x-large;
+        color: #fff;
+        z-index: 2;
+    }
+
+    .card:hover .hidden-text{
+        transition: transform 0.5s ease-in-out;
+        display: block;
+        width: auto;
+    }
+
+    .card:hover .hidden-text-h{
+        display: none;
+    }
+}
+/* Estilos para pantallas móviles */
+@media screen and (max-width: 719px) {
+        /* Estilos para pantallas móviles */
+        .card {
+            background-color: #f1f1f1;
+            padding: 10px;
+            margin: 10px;
+            width: 100%;
+            margin: 10px 0;
+            display: block;
+            border-radius: 5px;
+            transition: background-color 0.5s ease-in-out;
+        }
+
+        .cards-box {
+            display:block;
+            justify-content: center;
+        }
+
+        .hidden-text {
+            display: none;
+        }
+
+        .hidden-text-h {
+            display: block;
+        }
+        
+        .card:hover{
+            background-color: rgb(20, 189, 235, 95%);
+        }
+
+        .card:hover .hidden-text{
+            color: #fff;
+            font-size: large;
+            display: block;
+        }
+
+        .card:hover .hidden-text-h{
+            color: #fff;
+        }
+    }
+
+</style>
+<body>
+    <nav class="navbar">
+        <div class="logo">CuenTas</div>
+        <div>
+            <ul class="nav-button">
+                <li><a href="#" class="item">Leer mas</a></li>
+                <li><a href="#" class="button-1">Login</a></li>
+                <li><a href="#" class="button-2">Sing in</a></li>
+            </ul>
+        </div>   
+    </nav>
+
+    <section class="content">
+        <h1>¡Bienvenido a nuestro CuenTas!</h1>
+        <p></p>
+
+        <section class="cards-box">
+            <div class="card">
+                <h2 class="hidden-text-h">Fácil</h2>
+                <p class="hidden-text">Olvídate de los complicados cálculos manuales y la dificultad para seguir el ritmo de las transiciones</p>
+            </div>
+            <div class="card">
+                <h2 class="hidden-text-h c2">Ágil</h2>
+                <p class="hidden-text">Registrar ventas y gastos mucho mas fácil y rápido</p>
+            </div>
+            <div class="card">
+                <h2 class="hidden-text-h c3">Autónomo</h2>
+                <p class="hidden-text">Despreocupa te de los procesos, generar informes detallados y tomar decisiones informadas con confianza</p>
+            </div>
+        </section>
+
+    </section>
+
+    <footer class="footer">
+        <p>Derechos de autor © 2023. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>
+
