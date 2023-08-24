@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap" rel="stylesheet">
+
+    <title>Inicia Sesión</title>
+</head>
+<style media="screen">
+  *{
+    margin:0;
+    padding:0;
+    text-decoration:none;
+  }
+  
+  body{
+    padding: 0;
+    min-width: 375px;
+    background-color: white;
+    font-family: 'Bree Serif', serif;
+  }
+
+  h1{
+    font-weight: 400px;
+    font-size: 3rem;
+  }
+  
+  h2{
+    font-weight: 400px;
+    font-size: 2rem;
+  }
+
+  .area{
+    align-items: center;
+    display: flex;
+  }
+
+  .box{
+    width: 50%;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+  
+  .formulario-login{
+    padding: 3rem;
+    border-bottom: 5px solid grey;
+    border-right: 2px solid grey;
+    border-radius: 10px;
+  }
+  
+  .logo{
+    margin-left: 10px;
+    align-items: center;
+    font-weight: 700;
+    font-size: xx-large;
+  }
+  
+  .title{
+    margin-top:20px;
+    font-weight:300px;
+    text-align: center;
+  }
+  
+  label{
+    display:block;
+    margin-top:30px;
+    font-size:25px;
+    font-weight: 700;
+    color:#0A4E65;
+  }
+  
+  .formulario{
+    width: 100%;
+    box-sizing: border-box; /* Incluye el padding y borde en el ancho total */
+    border:none;
+    border-bottom: 2px solid #8080803D;
+    height: 40px;
+    background-color: #f1f1f1;
+    font-size:20px;
+    font-weight: 700;
+    border-radius: 10px;
+    padding: 20px 20px 20px 15px;
+    font-family: 'Bree Serif', serif;
+  }
+  
+  .button{
+    font-family: 'Bree Serif', serif;
+    font-size: large;
+    font-weight: 700;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+  }
+
+  .box-btn-sumit{
+    justify-content: center; 
+    display: flex;  
+    margin-top: 70px;
+  }
+  
+  .button:hover{
+    position: initial;
+    background-color: #0A4E65;
+    border-bottom: 5px solid #159dcbbb;
+    color: #fff;
+  }
+  
+  
+  .texto-footer{
+    text-align: center;
+    display:block;
+    margin-top: 50px;
+    font-size:18px;
+  }
+  
+  .footer-link{
+    color:#00B8DC;
+  }
+
+  /*****************Color Card**************/
+
+  .c1{
+    color: #F05176;
+    background-color: #FBE3E8;
+    border-bottom: #F051763D solid;
+  }
+
+  .c2{
+    color: #FF8100;
+    background-color: #FDEEDF;
+    border-bottom: #FF81003D solid;
+  }
+
+  .c3{
+    color: #00C555;
+    background-color: #E5F9EE;
+    border-bottom: #00c5553d solid;
+  }
+
+  /******************Cards******************/
+  .card {
+    padding: 40px;
+    margin: 10px 5px 5px 5px;
+    border-radius: 10px;
+  }
+
+  .cards-box {
+    padding: 5px;
+    width: 50%;
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .text {
+    font-size: large;
+  }
+
+  .footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+  }
+
+  @media screen and (max-width: 800px) {
+    .area {
+      align-items: center;
+      display: block;
+    }
+    
+    .box, .cards-box{
+      width: auto;
+    }
+
+
+  }
+</style>
+
+<body>
+    <header>
+      <div class="logo">
+        <a href="index.html" style="color: #0A4E65;">CuenTas</a>
+      </div>
+    </header>
+    
+    <section class="area">
+      <div class="box">
+        <div class="formulario-login">
+          <div class="title">
+            <h1 class="">Inicia Sesión</h1>
+          </div>
+      
+          <form class="box-form" action="login-user.php" method="post">
+      
+            <label for="">Email</label>
+            <input type="text"  name="email" class="formulario">
+            <label for="">Contraseña</label>
+            <input type="password" name="contraseña" class="formulario">
+
+            <div class="box-btn-sumit">
+              <input type="submit" class="button c3" value="Iniciar Sesión">
+            </div>
+      
+          </form>
+      
+          <span class="texto-footer"> ¿Aun no tienes una cuenta? <a class="footer-link" href="registro.html"> Regístrate</a>
+          </span>
+        </div>
+      </div>
+      
+      <div class="cards-box">
+        <div class="card c1">
+            <h2 class="text-h">Fácil</h2>
+            <p class="text">Olvídate de los complicados cálculos manuales y la dificultad para seguir el ritmo de las transiciones</p>
+        </div>
+        <div class="card c2">
+            <h2 class="text-h">Ágil</h2>
+            <p class="text">Registrar ventas y gastos ahora sera mucho mas fácil y rápido</p>
+        </div>
+        <div class="card c3">
+            <h2 class="text-h">Autónomo</h2>
+            <p class="text">Despreocupa te de los procesos, genera informes detallados y tomar decisiones informadas con confianza</p>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <p>Derechos de autor © 2023. Todos los derechos reservados.</p>
+  </footer>
+</body>
+</html>

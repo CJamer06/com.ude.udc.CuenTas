@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap" rel="stylesheet">
+
+    <title>Registro</title>
+</head>
+<style>
+  *{
+    text-decoration:none;
+  }
+  
+  body{
+    padding: 0;
+    min-width: 375px;
+    background-color: white;
+    font-family: 'Bree Serif', serif;
+  }
+
+
+  h1{
+    font-weight: 400px;
+    font-size: 3rem;
+  }
+  
+  h2{
+    font-weight: 400px;
+    font-size: 2rem;
+  }
+  
+  .box{
+    width: 50%;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+
+  .area{
+    align-items: center;
+    display: flex;
+  }
+  
+  .formulario-resgitro{
+    padding: 3rem;
+    border-bottom: 5px solid grey;
+    border-right: 2px solid grey;
+    border-radius: 10px;
+  }
+  
+  label{
+    display:block;
+    margin-top:30px;
+    font-size:25px;
+    font-weight: 700;
+    color:#0A4E65;
+  }
+  
+  .logo{
+    align-items: center;
+    font-weight: 700;
+    font-size: xx-large;
+  }
+  
+  .title{
+    font-weight:300px;
+    text-align: center;
+  }
+  
+  .formulario{
+    width: 100%;
+    box-sizing: border-box; /* Incluye el padding y borde en el ancho total */
+    border:none;
+    border-bottom: 2px solid #8080803D;
+    height: 40px;
+    background-color: #f1f1f1;
+    font-size:20px;
+    font-weight: 700;
+    border-radius: 10px;
+    padding: 20px 20px 20px 15px;
+    font-family: 'Bree Serif', serif;
+  }
+  
+  .button{
+    font-family: 'Bree Serif', serif;
+    font-size: large;
+    font-weight: 700;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    
+  }
+
+  .box-btn-sumit{
+    justify-content: center; 
+    display: flex;  
+    margin-top: 70px;
+  }
+  
+  .button:hover{
+    position: initial;
+    background-color: #0A4E65;
+    border-bottom: 5px solid #159dcbbb;
+    color: #fff;
+  }
+  
+  .texto-footer{
+    text-align: center;
+    display:block;
+    margin-top: 50px;
+    font-size:18px;  
+  }
+  
+  .texto-footer a{
+    color:#00B8DC;
+  }
+
+  /****************** Color ********************/
+  .c1{
+    color: #F05176;
+    background-color: #FBE3E8;
+    border-bottom: #F051763D solid;
+  }
+
+  .c2{
+    color: #FF8100;
+    background-color: #FDEEDF;
+    border-bottom: #FF81003D solid;
+  }
+
+  .c3{
+    color: #00C555;
+    background-color: #E5F9EE;
+    border-bottom: #00c5553d solid;
+  }
+
+
+  .card {
+    padding: 40px;
+    margin: 10px 5px 5px 5px;
+    border-radius: 10px;
+  }
+
+  .cards-box {
+    width: 50%;
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .text {
+    font-size: large;
+  }
+
+  .footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+  }
+
+  @media screen and (max-width: 800px) {
+    .area {
+      align-items: center;
+      display: block;
+    }
+    
+    .box, .cards-box{
+      width: auto;
+    }
+  }
+</style>
+
+<body>
+    
+  <header>
+    <div class="logo">
+      <a href="index.html" style="color: #0A4E65;">CuenTas</a>
+    </div>
+  </header>
+  
+  <section class="area">
+    <div class="box">
+      <div class="formulario-resgitro">
+        <h1 class="title">Crea tu cuenta</h1>
+    
+        <form action="registar-usuario.php" method="post">
+    
+    
+          <label for="">Nombre Completo</label>
+          <input type="text" name="nombre" class="formulario">
+    
+          <label for="">Email</label>
+          <input type="text" name="email"   class="formulario">
+    
+          <label for="">Contraseña</label>
+          <input type="password"  name="contraseña" class="formulario">
+          
+          <div class="box-btn-sumit">
+            <input type="submit" class="button c2" value="Crear Cuenta">
+          </div>
+    
+        </form>
+    
+        <span class="texto-footer"> Si ya tienes una cuenta solo <a href="login.html" >Inicia sesión</a>
+        </span>
+      </div>
+    </div>
+
+    <div class="cards-box">
+      <div class="card c1">
+          <h2 class="text-h">Gratis</h2>
+          <p class="text">Sin pagos adicionales, las únicas cuentas que queremos ayudarte a llevar, son las de tu negocio.</p>
+      </div>
+      <div class="card c2">
+          <h2 class="text-h">Rápido</h2>
+          <p class="text">Sin tantas vueltas, solo crea una cuenta y disfruta de ver crecer tus finanzas.</p>
+      </div>
+      <div class="card c3">
+          <h2 class="text-h">Seguro</h2>
+          <p class="text">Con nosotros no debes preocuparte de tus datos, en nuestras manos estarán muy bien protegidos.</p>
+      </div>
+    </div>
+  </section>
+  
+  <footer class="footer">
+    <p>Derechos de autor © 2023. Todos los derechos reservados.</p>
+</footer>
+</body>
+</html>

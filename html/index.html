@@ -7,144 +7,219 @@
     <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap" rel="stylesheet">
     <title>CuenTas</title>
 </head>
-<style>
+    <style>
 
-body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Bree Serif', serif;
-}
+    body {
+        padding: 0;
+        font-family: 'Bree Serif', serif;
+        min-width: 375px;
+        background-color: white;
+    }
 
-h1{
-    font-weight: 500px;
-    font-size: 3rem;
-}
+    h1{
+        font-weight: 500px;
+        font-size: 4rem;
+    }
 
-.navbar {
-    border: 1px solid gray;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-}
+    h2{
+        font-size: xx-large;
+    }
 
-.logo {
-    font-size: 24px;
-    font-weight: bold;
-}
+    h3{
+        font-size: xx-large;
+    }
 
-.button-1{
-    text-decoration: none;
-    color: #0A4E65;
-    background-color: #9BEABD;
-    padding: 10px 20px;
-    border-radius: 10px;
-    transition: background-color 0.3s ease-in-out;
-}
+    a {
+        font-size: 15px;
+        font-weight: bold;
+    }
 
-.button-2{
-    text-decoration: none;
-    color: #0A4E65;
-    background-color: #F9BF84;
-    padding: 10px 20px;
-    border-radius: 10px;
-    transition: background-color 0.3s ease-in-out;
-}
+    .sbt1 {
+        font-size: large;
+    }
 
-.item {
-    text-decoration: none;
-    color: #0A4E65;
-    padding: 10px 20px;
-    border-radius: 10px;
-    transition: background-color 0.5s ease-in-out;
-}
+    .navbar {
 
-.content {
-    padding: 40px;
-    text-align: center;
-}
-
-.footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 10px 0;
-}
-
-.nav-button {
-    display: flex;
-    list-style: none;
-    gap: 10px;
-}
-
-.nav-button li a:hover {
-    background-color: #0A4E65;
-    color: #fff;
-}
-
-.hidden-text {
-    display: none;
-}
-
-/* Son Las Tarjetas de información y como se comportan */
-
-@media screen and (min-width: 720px) {
-    .card {
-        background-color: #f1f1f1;
-        padding: 20px;
-        margin: 10px;
-        border-radius: 5px;
-        text-align: center;
-        display: flex;
-        justify-content: center;
+        background-color: #fff;
+        border-radius: 10px;
+        border-bottom: 5px solid #97979763;
+        justify-content: space-between;
         align-items: center;
-        transition: transform 0.3s ease-in-out, background-color 0.5s ease-in-out; /* Agregamos background-color */
-    }
-
-    .card h2 {
-        margin:1px;
-    }
-
-    .cards-box {
+        padding: 10px 20px;
         display:flex;
-        justify-content: center;
-    }
-
-    .card:hover{
-        transform: scale(1.05);
-        position: fixed;
-        background-color: rgb(20, 189, 235, 95%);
-        font-size: x-large;
-        color: #fff;
+        position:fixed;
+        width: 95%;
         z-index: 2;
     }
 
-    .card:hover .hidden-text{
-        transition: transform 0.5s ease-in-out;
-        display: block;
-        width: auto;
+    .logo {
+        color: #0A4E65;
+        font-size: 30px;
+        font-weight: bold;
     }
 
-    .card:hover .hidden-text-h{
+    .button-1{
+        text-decoration: none;
+        padding: 10px 20px;
+        border-radius: 10px;
+        transition: background-color 0.3s ease-in-out;
+    }
+
+    .button-2{
+        text-decoration: none;
+        padding: 10px 20px;
+        border-radius: 10px;
+        transition: background-color 0.3s ease-in-out;
+    }
+
+    .item {
+        text-decoration: none;
+        color: #0A4E65;
+        padding: 10px 20px;
+        border-radius: 10px;
+        transition: background-color 0.5s ease-in-out;
+    }
+
+    .item2 {
+        text-decoration: none;
+        color: #0A4E65;
+        padding: 10px 20px;
+        border-radius: 10px;
+        transition: background-color 0.5s ease-in-out;
+    }
+
+    .content {
+        padding: 40px;
+        text-align: center;
+    }
+
+    .footer {
+        background-color: #333;
+        color: #fff;
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    .nav-button {
+        display: flex;
+        list-style: none;
+        gap: 10px;
+    }
+
+    .nav-button li a:hover {
+        background-color: #0A4E65;
+        color: #fff;
+    }
+
+    .hidden-text {
         display: none;
     }
-}
-/* Estilos para pantallas móviles */
-@media screen and (max-width: 719px) {
-        /* Estilos para pantallas móviles */
+
+    .hidden-info {
+        display: none; /* Inicialmente oculta la información */
+    }
+
+    .show-info:checked ~ .hidden-info {
+        display: block; /* Muestra la información cuando se marca el enlace */
+    }
+
+    .c1{
+        color: #F05176;
+        background-color: #FBE3E8;
+        border-bottom: #F051763D solid;
+    }
+
+    .c2{
+        color: #FF8100;
+        background-color: #FDEEDF;
+        border-bottom: #FF81003D solid;
+    }
+
+    .c3{
+        color: #00C555;
+        background-color: #E5F9EE;
+        border-bottom: #00c5553d solid;
+    }
+
+    .c4 {
+        color: #009CC6;
+    }
+
+    /* Son Las Tarjetas de información y como se comportan */
+    @media screen and (min-width: 720px) {
+
+        .item2{
+            display: none;
+        }
+
         .card {
-            background-color: #f1f1f1;
+            padding: 20px;
+            margin: 10px;
+            border-radius: 10px;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: transform 0.3s ease-in-out; /* Agregamos background-color */
+        }
+
+        .card h2 {
+            margin: 10px;
+        }
+
+        .cards-box {
+            display:flex;
+            justify-content: center;
+        }
+
+        .card:hover{
+            height: 20%;
+            width: 60%;
+            padding-top: 0%;
+            padding-bottom: 0%;
+            transform: scale(1.05);
+            position:absolute;
+            font-size: x-large;
+            z-index: 2;
+        }
+
+        .card:hover .hidden-text{
+            transition: transform 0.5s ease-in-out;
+            display: block;
+        }
+
+        .card:hover .hidden-text-h{
+            display: none;
+        }
+    }
+    /* Estilos para pantallas móviles */
+    @media screen and (max-width: 719px) { /* Estilos para pantallas móviles */
+        .item{
+            display: none;
+        }
+
+        .item2:hover{
+        background-color: #0A4E65;
+        color: #fff;
+        }
+
+        h1{
+            font-size:50px;
+        }
+
+        /******************Cards******************/
+        .card {
             padding: 10px;
             margin: 10px;
             width: 100%;
             margin: 10px 0;
-            display: block;
-            border-radius: 5px;
+            display: flex;
+            border-radius: 10px;
             transition: background-color 0.5s ease-in-out;
         }
 
         .cards-box {
-            display:block;
+            display:contents;
             justify-content: center;
         }
 
@@ -153,58 +228,54 @@ h1{
         }
 
         .hidden-text-h {
-            display: block;
-        }
-        
-        .card:hover{
-            background-color: rgb(20, 189, 235, 95%);
+            display: flex;
         }
 
         .card:hover .hidden-text{
-            color: #fff;
-            font-size: large;
+            transition-delay: 0.9s ease-in-out;
+            font-size: x-large;
             display: block;
-        }
-
-        .card:hover .hidden-text-h{
-            color: #fff;
+            padding:30px;
         }
     }
 
-</style>
+    </style>
 <body>
     <nav class="navbar">
         <div class="logo">CuenTas</div>
         <div>
             <ul class="nav-button">
-                <li><a href="#" class="item">Leer mas</a></li>
-                <li><a href="#" class="button-1">Login</a></li>
-                <li><a href="#" class="button-2">Sing in</a></li>
+                <li><a href="more.html" class="item c4">Leer mas</a></li>
+                <li><a href="login.html" class="button-1 c3">Iniciar Sesión</a></li>
+                <li><a href="registro.html" class="button-2 c2">Registrarse</a></li>
             </ul>
         </div>   
     </nav>
 
     <section class="content">
         <h1>¡Bienvenido a nuestro CuenTas!</h1>
-        <p></p>
-
-        <section class="cards-box">
-            <div class="card">
-                <h2 class="hidden-text-h">Fácil</h2>
-                <p class="hidden-text">Olvídate de los complicados cálculos manuales y la dificultad para seguir el ritmo de las transiciones</p>
-            </div>
-            <div class="card">
-                <h2 class="hidden-text-h c2">Ágil</h2>
-                <p class="hidden-text">Registrar ventas y gastos mucho mas fácil y rápido</p>
-            </div>
-            <div class="card">
-                <h2 class="hidden-text-h c3">Autónomo</h2>
-                <p class="hidden-text">Despreocupa te de los procesos, generar informes detallados y tomar decisiones informadas con confianza</p>
-            </div>
-        </section>
-
+        <p class="sbt1">Tu aliado en contra de las malas finanzas</p>
     </section>
 
+    <section class="cards-box">
+        <div class="card c1">
+            <h2 class="hidden-text-h">Fácil</h2>
+            <p class="hidden-text">Olvídate de los complicados cálculos manuales y la dificultad para seguir el ritmo de las transiciones</p>
+        </div>
+        <div class="card c2">
+            <h2 class="hidden-text-h">Ágil</h2>
+            <p class="hidden-text">Registrar ventas y gastos ahora sera mucho mas fácil y rápido</p>
+        </div>
+        <div class="card c3">
+            <h2 class="hidden-text-h">Autónomo</h2>
+            <p class="hidden-text">Despreocupa te de los procesos, genera informes detallados y tomar decisiones informadas con confianza</p>
+        </div>
+    </section>
+
+    <section class="content c4">
+        <h3>Organiza tus cuentas y has crecer tu negocio</h3>
+    </section>
+    
     <footer class="footer">
         <p>Derechos de autor © 2023. Todos los derechos reservados.</p>
     </footer>

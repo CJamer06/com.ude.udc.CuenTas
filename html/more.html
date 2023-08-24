@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap" rel="stylesheet">
+
+    <title>Mas información</title>
+</head>
+
+<style>
+    *{
+        text-decoration: none;
+    }
+
+    body{
+        padding: 0;
+        min-width: 550px;
+        background-color: white;
+        font-family: 'Bree Serif', serif;
+    }
+
+    h1{
+        font-weight: 400px;
+        font-size: 2rem;
+    }
+
+    p{
+        font-size: large;
+    }
+
+    .navbar {
+        background-color: #fff;
+        border-radius: 10px;
+        border-bottom: 5px solid #97979763;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 20px;
+        min-width: 550px;
+        margin: none;
+        display:flex;
+        position: fixed;
+        width: 95%;
+        z-index: 2;
+    }
+
+    .logo {
+        color: #0A4E65;
+        font-size: 30px;
+        font-weight: bold;
+    }
+
+    .nav-button {
+        display: flex;
+        list-style: none;
+        gap: 10px;
+    }
+
+    .nav-button li a:hover {
+        background-color: #0A4E65;
+        color: #fff;
+    }
+
+    .button-1{
+        text-decoration: none;
+        color: #0A4E65;
+        background-color: #9BEABD;
+        padding: 10px 20px;
+        border-radius: 10px;
+        transition: background-color 0.3s ease-in-out;
+    }
+
+    .button-2{
+        text-decoration: none;
+        color: #0A4E65;
+        background-color: #F9BF84;
+        padding: 10px 20px;
+        border-radius: 10px;
+        transition: background-color 0.3s ease-in-out;
+    }
+
+    .item {
+        text-decoration: none;
+        color: #0A4E65;
+        padding: 10px 20px;
+        border-radius: 10px;
+        transition: background-color 0.5s ease-in-out;
+    }
+
+    .content {
+        padding: 40px;
+        text-align: center;
+    }
+
+    /****************** Color ********************/
+    .c1{
+        color: #F05176;
+        background-color: #FBE3E8;
+        border-bottom: #F051763D solid;
+    }
+
+    .c2{
+        color: #FF8100;
+        background-color: #FDEEDF;
+        border-bottom: #FF81003D solid;
+    }
+
+    .c3{
+        color: #00C555;
+        background-color: #E5F9EE;
+        border-bottom: #00c5553d solid;
+    }
+
+    .c4 {
+        color: #009CC6;
+    }
+
+    .card {
+        text-align: center;
+        padding: 40px;
+        margin: 10px 5px 5px 5px;
+        border-radius: 10px;
+    }
+
+    .cards-box {
+        display: flex;
+        justify-content: center;
+    }
+
+    .text {
+        font-size: large;
+    }
+
+    .footer {
+        background-color: #333;
+        color: #fff;
+        text-align: center;
+        padding: 10px 0;
+    }
+    @media screen and (min-width: 1201px){
+        .card {
+            max-height: max-content;
+            min-height: max-content;
+            min-width: 300px;
+            max-width: 200px;
+        }
+    }
+    @media screen and (max-width: 1200px){
+        .cards-box {
+            display: block;
+            justify-content: center;
+        }
+
+        .card{
+            min-width: none;
+        }
+    }
+</style>
+
+<body>
+    <nav class="navbar">
+        <a class="logo" href="index.html">CuenTas</a>
+        <div>
+            <ul class="nav-button">
+                <li><a href="login.html" class="button-1 c3">Iniciar Sesión</a></li>
+                <li><a href="registro.html" class="button-2 c2">Registrarse</a></li>
+            </ul>
+        </div>   
+    </nav> 
+    
+    <section class="content">
+        <h1>
+            ¿Quienes somos?
+        </h1>
+        <p>Occaecat ea est nulla voluptate Lorem qui aliqua sint consequat quis quis. Voluptate officia Lorem pariatur enim occaecat aliquip sit. Eu commodo dolor minim labore enim. Lorem Lorem proident adipisicing commodo pariatur reprehenderit in dolore irure mollit. Occaecat ipsum excepteur ullamco aliqua aute pariatur sunt occaecat reprehenderit duis deserunt. In minim ullamco ut velit.
+        <br>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Adipisci, minus, natus dolore velit quasi deleniti esse dolor consequuntur neque tenetur, pariatur sunt omnis quidem debitis quos! Quaerat maiores praesentium aperiam.</p>
+        
+        <h1>
+            ¿Que es CuenTas y como trabajar con nosotros?
+        </h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint cum officiis facilis quibusdam quaerat, repellendus nam illum illo dolor ea alias ab atque tenetur dolorum et numquam error! Deleniti, praesentium.
+        <br>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Adipisci, minus, natus dolore velit quasi deleniti esse dolor consequuntur neque tenetur, pariatur sunt omnis quidem debitis quos! Quaerat maiores praesentium aperiam.</p>
+        
+        <h1>
+            Desarrolladores de CuenTas
+        </h1>
+    </section>
+
+    <section class="cards-box">
+        <div class="card c1">
+            <h2 class="text-h">Yuriana Cantillo Sabalza</h2>
+            <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores aliquid, expedita in nulla facilis quaerat itaque sed officia dolorum, corporis, labore dolor fugiat quibusdam quisquam ipsam laudantium reprehenderit. Dignissimos, commodi!</p>
+        </div>
+        <div class="card c2">
+            <h2 class="text-h">Miguel Mejia Orozco</h2>
+            <p class="text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Saepe ducimus quis nemo! Repellendus, neque, natus tempora doloribus earum error molestias atque nam deleniti, asperiores maxime. Quisquam illo magni provident sit.</p>
+        </div>
+        <div class="card c3">
+            <h2 class="text-h">Carlos Javier Amaranto Mercado</h2>
+            <p class="text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maiores aliquid nostrum rerum iure nobis quam quas a sit distinctio ab, cupiditate rem cumque provident pariatur tempora numquam quae eveniet. Qui.</p>
+        </div>
+      </section>
+
+    <footer class="footer">
+        <p>Derechos de autor © 2023. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>
