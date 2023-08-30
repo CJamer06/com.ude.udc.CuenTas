@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -76,7 +76,7 @@
     color:#0A4E65;
   }
   
-  .formulario{
+  .formulario, .formulario2{
     width: 100%;
     box-sizing: border-box; /* Incluye el padding y borde en el ancho total */
     border:none;
@@ -201,9 +201,10 @@
           <form class="box-form" action="login-user.php" method="post">
       
             <label for="">Email</label>
-            <input type="text"  name="email" class="formulario">
+            </input type="text"  name="email" class="formulario">
             <label for="">Contraseña</label>
-            <input type="password" name="contraseña" class="formulario">
+            </input type="password" id="contraseña" name="contraseña" class="formulario2">
+            <div id="indicador"></div>
 
             <div class="box-btn-sumit">
               <input type="submit" class="button c3" value="Iniciar Sesión">
@@ -235,5 +236,44 @@
     <footer class="footer">
       <p>Derechos de autor © 2023. Todos los derechos reservados.</p>
   </footer>
+
+
+  <script>
+    const contraseñaInput = document.getElementById("contraseña");
+    const indicador = document.getElementById("indicador");
+  
+    contraseñaInput.addEventListener("input", validarContraseña);
+  
+    function validarContraseña() {
+      const contraseña = contraseñaInput.value;
+      let fortaleza = 0;
+  
+      // Verificar caracteres especiales
+      if (/[!@#$%^&*()_+{}\[\]:;<>,.?~\\/-]/.test(contraseña)) {
+        fortaleza++;
+      }
+  
+      // Verificar números
+      if (/\d/.test(contraseña)) {
+        fortaleza++;
+      }
+  
+      // Cambiar color del formulario
+      if (fortaleza === 0) {
+        contraseñaInput.classList.remove("c2", "c3");
+        contraseñaInput.classList.add("c1");
+      } else if (fortaleza === 1) {
+        contraseñaInput.classList.remove("c1", "c3");
+        contraseñaInput.classList.add("c2");
+      } else if (fortaleza === 2) {
+        contraseñaInput.classList.remove("c1", "c2");
+        contraseñaInput.classList.add("c3");
+      }
+  
+      // Actualizar el indicador
+      indicador.textContent = `Fortaleza de la contraseña: ${fortaleza === 0 ? "Débil usa (!@#$%^&*) o (1,2,3,4...) " 
+      : (fortaleza === 1 ? "Moderada" : "Fuerte")}`;
+    }
+  </script>
 </body>
 </html>
