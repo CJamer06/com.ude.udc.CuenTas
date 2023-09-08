@@ -1,0 +1,193 @@
+body {
+    padding: 0;
+    font-family: 'Bree Serif', serif;
+    min-width: 375px;
+    background-color: white;
+  }
+
+  h1{
+
+    font-weight: bold;
+    font-size: 4rem;
+  }
+
+  h2{
+    font-weight: bold;
+    font-size: xx-large;
+    margin: 0px;
+  }
+
+  h3{
+    font-weight: bold;
+    font-size: x-large;
+  }
+
+  p {
+    margin: 0;
+  }
+
+  
+  .nav-link, a {
+    white-space: nowrap;
+    font-size: 15px;
+    font-weight: bold;
+  }
+
+  /* Barra de Navegación */
+
+  .navbar{
+    border-radius: 10px;
+    padding: 10px;
+    margin: 2px;
+  }
+
+  .nav-button{
+    display: flex;
+    list-style: none;
+    gap: 10px;
+    margin: 0px;
+  }
+
+  /* Botones */
+
+  .button, .box{
+    padding: 10px 20px;
+    border-radius: 10px;
+    transition: background-color 0.3s ease-in-out;
+  }
+
+  .button{
+    width: min-content;
+  }
+
+  /* Main */
+  .content {
+    padding: 40px;
+    text-align: center;
+  }
+
+  .box{
+    margin-top: 30px;
+  }
+
+  .c1{
+    color: #F05176;
+    background-color: #FBE3E8;
+    border-bottom: 3px #F051763D solid;
+  }
+
+  .c2{
+    color: #FF8100;
+    background-color: #FDEEDF;
+    border-bottom: 3px #FF81003D solid;
+  }
+
+  .c3{
+    color: #00C555;
+    background-color: #E5F9EE;
+    border-bottom: 3px #00c5553d solid;
+  }
+
+  .c4 {
+    color: #009CC6;
+    background-color: #bbf0ff;
+    border-bottom: 3px #009CC63D solid;
+  }
+
+  .c5{
+    color: white;
+    background-color: #0A4E65;
+    border-bottom: 3px solid #009CC6;
+  }
+
+  .c6{
+    color: black;
+    background-color: #fff;
+    border-bottom: 3px #80808089 solid;
+  }
+
+  /* Hovers */
+
+  .button:hover{
+    color: white;
+    background-color: #0A4E65;
+    border-bottom: 3px solid #009CC6;
+  }
+
+  /* Cards */
+
+  .card {
+    padding: 20px;
+    margin: 10px;
+    border: none;
+    border-bottom: 3px solid;
+    border-radius: 10px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .cards-box {
+    display:flex;
+    justify-content: center;
+  }
+
+  .card:hover{
+    height: 20%;
+    width: 60%;
+    padding-top: 0%;
+    padding-bottom: 0%;
+    transform: scale(1.05);
+    position:absolute;
+    font-size: x-large;
+    z-index: 2;
+  }
+
+  .card:hover .hidden-text{
+    transition: transform 0.5s ease-in-out;
+    display: block;
+  }
+
+  .card:hover .hidden-text-h{
+    display: none;
+  }
+
+  .hidden-text {
+    display: none;
+  }
+
+  /* Pie de pagina */
+
+  .footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    margin: 0px;
+  }
+
+  @media screen and (max-width: 750px) { /* Estilos para pantallas móviles */
+
+    h1{
+        font-size:50px;
+    }
+
+    .cards-box {
+      display: block;
+      justify-content: center;
+    }
+
+    .hidden-text {
+        display: none;
+    }
+
+    .card:hover{
+        width: 100%;
+        position: relative;
+        transition-delay: 0.5s ease-in-out;
+        font-size: x-large;
+        padding:30px;
+    }
+  }
