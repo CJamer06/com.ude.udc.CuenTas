@@ -1,4 +1,4 @@
-  *{
+*{
     margin:0;
     padding:0;
     text-decoration:none;
@@ -54,11 +54,11 @@
     border-bottom: 5px solid grey;
     border-radius: 10px;
   }
-
+  
   .form-control{
     padding: 10px;
   }
-  
+
   .logo{
     margin-left: 10px;
     align-items: center;
@@ -183,7 +183,7 @@
     padding: 10px 0;
   }
 
-  @media screen and (max-width: 800px) {
+  @media screen and (max-width: 900px) {
     .area {
       align-items: center;
       display: block;
@@ -192,6 +192,4 @@
     .box, .cards-box{
       width: auto;
     }
-
-
-  }
+}
