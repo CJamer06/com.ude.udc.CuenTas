@@ -175,7 +175,7 @@
       </section>
 
       <!-- Stock --->
-      <section class="tab-content d-block" id="contect2">
+      <section class="tab-content" id="contect2">
         <div class="action c2" id="stock">
           <label class="h2 fw-bold">Inventario</label>
 
@@ -184,23 +184,23 @@
           </button>
         </div>
 
-        <div class="f-np c3 action d-block">
+        <div class="f-np c3 action" id="formulario">
           <label class="h2 fw-bold">
             Agregar Producto
           </label>
-          <form class="text-start" action="../php/agrgar-producto.php" method="post" id="formulario">
+          <form class="text-start" action="../php/agrgar-producto.php" method="post">
 
               <p class="h5 mt-2 fw-bold">Nombre del Producto</p>
-              <input class="formulario c5" type="text" name="nombre" placeholder="Nombre">
+              <input class="form-np c5" type="text" name="nombre" placeholder="Nombre">
                 
               <p class="h5 mt-2 fw-bold">Cantidad Inicial</p>
-              <input class="formulario c5" type="text" name="cantidad" placeholder="Cantidad">
+              <input class="form-np c5" type="text" name="cantidad" placeholder="Cantidad">
               
               <p class="h5 mt-2 fw-bold">Costo Unitario</p>
-              <input class="formulario c5" type="number" name="precio" placeholder="Costo">
+              <input class="form-np c5" type="number" name="precio" placeholder="Costo">
                 
               <p class="h5 mt-2 fw-bold">Precio Unitario</p>
-              <input class="mb-4 formulario c5" type="number" name="precio" placeholder="Precio">
+              <input class="mb-4 form-np c5" type="number" name="precio" placeholder="Precio">
             
             <p class="h6 mt-2 fw-bold">
               Imagen del producto
@@ -240,6 +240,7 @@
 
       tabContents[0].style.display="none";
       tabContents[tabIndex].style.display = "block";
+      document.getElementById("stock").style.display="block";
     }
 
     function validarNumero() {
