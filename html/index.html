@@ -10,66 +10,73 @@
   <!-- Bootstrap CSS v5.2.1 -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
 
-  <link rel="stylesheet" href="../css/index.css">
+  <link rel="stylesheet" href="../css/style.css">
 
 </head>
 
 <body>
-  <header>
-      <!-- place navbar here -->
-      <nav class="navbar navbar-expand-lg bg-body-tertiary c6">
-          <div class="container-fluid">
-              
-                  <a class="navbar-brand" href="index.html">
-                      <h2>CuenTas</h2>
-                  </a>
-            <button class="navbar-toggler c6" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-            
-            <div class="collapse navbar-collapse flex-row-reverse" id="navbarSupportedContent">
-              <div class="gap-3">
-                  <ul class="navbar-nav mb-2 mb-lg-0 item gap-3">
-                      <li class="nav-item"><a class="nav-link c4 button" aria-current="page" href="more.html">Leer mas</a></li>
-                      <li class="nav-item"><a class="nav-link c3 button" aria-current="page" href="login.html">Iniciar Sesión</a></li>
-                      <li class="nav-item"><a class="nav-link c2 button" aria-current="page" href="singup.html">Registrarse</a></li>
-                  </ul>
-              </div> 
-            </div>
-          </div>
-        </nav>
-    </header>
+  <header> <!-- Barra de navegación -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary c6">
+      <div class="container-fluid">          
+        <a class="navbar-brand" href="index.html">
+          <p class="h2 fw-bold">CuenTas</p>
+        </a>
+        <button class="navbar-toggler c6" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        
+        <div class="collapse navbar-collapse flex-row-reverse" id="navbarSupportedContent">
+          <div class="gap-3">
+              <ul class="navbar-nav mb-2 mb-lg-0 item gap-3">
+                  <li class="nav-item"><a class="nav-link c4 t-btn btn" aria-current="page" href="more.html">Leer mas</a></li>
+                  <li class="nav-item"><a class="nav-link c3 t-btn btn" aria-current="page" href="login.html">Iniciar Sesión</a></li>
+                  <li class="nav-item"><a class="nav-link c2 t-btn btn" aria-current="page" href="singup.html">Registrarse</a></li>
+              </ul>
+          </div> 
+        </div>
+      </div>
+    </nav>
+  </header>
+
   <main>
-    <section class="content">
-      <h1>¡Bienvenido a CuenTas!</h1>
-      <h3 class="box">Tu aliado en contra de las malas finanzas</h3>
+    <section class="text-center m-2 p-5">
+      <p class="h1 fs-1 fw-bold mb-2">¡Bienvenido a CuenTas!</p>
+      <p class="h3 p-h">Tu aliado en contra de las malas finanzas</p>
     </section>
 
-    <section class="cards-box">
-      <div class="card c1">
-        <h2 class="hidden-text-h">Fácil</h2>
-        <p class="hidden-text">Olvídate de los complicados cálculos manuales y la dificultad para seguir el ritmo de las transiciones</p>
+    <section class="card-box d-flex justify-content-center">
+
+      <div class="card c1 mb-3 m-1">
+        <p class="h2 mb-0 mt-4 fw-bold">Fácil</p>
+        <div class="card-body h5">
+          <p class="card-text">Olvídate de los complicados cálculos manuales y la dificultad para seguir el ritmo de las transiciones</p>
+        </div>
       </div>
-      <div class="card c2">
-        <h2 class="hidden-text-h">Ágil</h2>
-        <p class="hidden-text">Registrar ventas y gastos ahora sera mucho mas fácil y rápido</p>
+
+      <div class="card c2 mb-3 m-1">
+        <p class="h2 mb-0 mt-4 fw-bold">Ágil</p>
+        <div class="card-body">
+          <p class="card-text h5">Registrar ventas y gastos ahora sera mucho mas rápido y eficiente</p>
+        </div>
       </div>
-      <div class="card c3">
-        <h2 class="hidden-text-h">Autónomo</h2>
-        <p class="hidden-text">Despreocupa te de los procesos, genera informes detallados y tomar decisiones informadas con confianza</p>
+
+      <div class="card c3 mb-3 m-1">
+        <p class="h2 mb-0 mt-4 fw-bold">Autónomos</p>
+        <div class="card-body h5">
+          <p class="card-text">Despreocupa te de los procesos, genera informes detallados y tomar decisiones informadas con confianza</p>
+        </div>
       </div>
+
     </section>
 
-    <section class="content">
-        <h3>
-            <p style="color: #009CC6;"> >> Organiza tus cuentas y has crecer tu negocio << </p>
-        </h3>
+    <section class="p-4 text-center" style="color: #009CC6">
+      <p class="fw-bold h2 " > 👉 Organiza tus cuentas y has crecer tu negocio 👈 </p>
     </section>
 
   </main>
 
-  <footer class="footer">
-    <p>Derechos de autor © 2023. Todos los derechos reservados.</p>
+  <footer class="">
+    
   </footer>
 
   <!-- Bootstrap JavaScript Libraries -->

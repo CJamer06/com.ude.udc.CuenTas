@@ -51,6 +51,7 @@
   
   .formulario{
     padding: 3rem;
+    border: 1px solid grey;
     border-bottom: 5px solid grey;
     border-radius: 10px;
   }
@@ -159,7 +160,7 @@
 
   /******************Cards******************/
   .card {
-    padding: 40px;
+    padding-block: 3.3rem;
     margin: 10px 5px 5px 5px;
     border-radius: 10px;
   }
