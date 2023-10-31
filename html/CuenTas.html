@@ -1,482 +1,302 @@
-<!DOCTYPE html>
-<html lang="es">
+<!doctype html>
+<html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>📈CuenTas📉</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <link rel="stylesheet" type="text/css" href="styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap" rel="stylesheet">
 
-    <!-- Icon -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />    
-    <title>📈CuenTas📉</title>
+  <!-- Bootstrap CSS v5.2.1 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+
+  <!-- Icon -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />    
+  <link rel="stylesheet" href="../css/cuentas.css">
+  <link rel="stylesheet" href="../php/agrgar-producto.php">
 </head>
-<style>
-  *{
-    margin:0;
-    padding:0;
-    text-decoration:none;
-  }
-  
-  body{
-    padding: 0;
-    min-width: 375px;
-    background-color: #f0f0f0;
-    font-family: 'Bree Serif', serif;
-  }
 
-  h1{
-    font-weight: 400px;
-    font-size: 3rem;
-  }
-  
-  h2{
-    font-weight: 400px;
-    font-size: 1.3rem;
-  }
+<body class="m-1">
+  <header>
+    <!-- place navbar here -->
+  </header>
 
-  button {
-    width: 100%;
-    font-family: 'Bree Serif', serif;
-  }
-
-  th{
-    border-radius: 5px;
-    padding: 5px;
-  }
-  
-  td{
-    border: 1px solid;
-    border-radius: 5px;
-    padding: 2px;
-  }
-
-  .area{
-    display: flex;
-  }
-
-  .box-lateral{
-    min-width: 300px;
-    max-width: 300px;
-    min-height: 600px;
-    background-color: #fff;
-    border-bottom: 5px solid grey;
-    border-right: 2px solid grey;
-    border-radius: 10px;
-    padding: 20px;
-    position: relative;
-  }
-
-  .box-total{
-    width: 74%;
-    border-radius: 10px;
-    padding: 20px;
-    margin: 5px;
-  }
-  
-  .logo{
-    margin: 30px;
-    margin-bottom: 120px;
-    text-align: center;
-    font-weight: 700;
-    font-size: xxx-large;
-  }  
-
-  .tab-button{
-    display: flex;
-    align-items: center;
-    font-family: 'Bree Serif', serif;
-    text-align: justify;
-    border: none;
-    border-radius: 10px;
-  }
-
-  .inicio{
-    display: block;
-  }
-
-  .logout{
-    margin-top: 95%;
-    position:absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    padding: 10px;
-  }
-
-  .tab-content{
-    display: none;
-  }
-
-  .action {
-    border-radius: 10px;
-    margin-bottom: 10px;
-    padding: 20px;
-    text-align: center;
-  }
-
-  .actions{
-    display:flex; 
-    justify-content:center;
-    gap: 20px;
-  }
-
-  .open_closed{
-    background-color: #fff;
-    border-radius: 10px;
-    border-bottom: 5px solid #97979763;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-    display:flex;
-  }
-
-  .box-form, .box-form-2{
-    align-items: center;
-    margin-top: 20px;
-  }
-
-  .button-sales{
-    border: none;
-    border-radius: 5px;
-    margin: 5px;
-    padding: 5px;
-    width: 3rem;
-  }
-
-  .button-submit{
-    width: min-content;
-    border-radius: 5px;
-    margin: 10px;
-    padding: 10px;
-  }
-
-  .p-button{
-    font-size: 1.2rem;
-    font-weight: 700;
-  }
-
-  .formulario{
-    width: 100%;
-    box-sizing: border-box; /* Incluye el padding y borde en el ancho total */
-    border:none;
-    border-bottom: 2px solid #8080803D;
-    height: 40px;
-    background-color: #f1f1f1;
-    font-size:20px;
-    font-weight: 700;
-    border-radius: 10px;
-    padding: 20px 20px 20px 15px;
-    font-family: 'Bree Serif', serif;
-    margin-bottom: 10px;
-    margin-top: 5px;
-  }
-  /*****************Color Card**************/
-
-  .c1{
-    color: #F05176;
-    background-color: #FBE3E8;
-    border-bottom: #F051763D solid;
-  }
-
-  .c2{
-    color: #FF8100;
-    background-color: #FDEEDF;
-    border-bottom: #FF81003D solid;
-  }
-
-  .c3{
-    color: #00C555;
-    background-color: #E5F9EE;
-    border-bottom: #00c5553d solid;
-  }
-
-  .c4 {
-    color: #009CC6;
-    background-color: #bbf0ff;
-    border-bottom: #009CC63D solid;
-  }
-
-  .c5{
-    color: black;
-    background-color: #fff;
-    border: 1px solid #8080809D;
-    border-bottom:5px grey solid;
-  }
-
-  /******************Cards******************/
-  .card {
-    padding: 20px 20px 20px 10px;
-    margin: 10px 5px 5px 5px;
-    border-radius: 10px;
-    position:static;
-  }
-
-  .cards-box {
-    padding: 5px;
-    align-items: center;
-    margin-top: 16%;
-  }
-
-  .text {
-    font-size: large;
-  }
-
-  .footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 10px 0;
-  }
-
-  .serch{
-    display: flex; 
-    justify-content: space-between;
-  }
-
-  @media screen and (max-width: 1000px) {
-    .actions{
-      display: block;
-    }
-  }
-
-  @media screen and (max-width: 1200px) {
-    .serch{
-      display: block;
-    }
-  }
-</style>
-
-<body>
-  <section class="area">
-      <section class="box-lateral">
-        
-        <header>
-          <div class="logo">
-            <a onclick="changeTab(0)" style="color: #0A4E65;">
-              CuenTas
-            </a>
-          </div>
-        </header>
-
-        <element>
-          <div class="cards-box">
-            <button class="tab-button card c3" onclick="changeTab(1)">
-              <div class="material-symbols-outlined" style="padding-right: 5px;">currency_exchange</div>
-              <h2>Caja Registradora</h2>
-            </button>
-            <button class="tab-button card c2" onclick="changeTab(2)">
-              <div class="material-symbols-outlined" style="padding-right: 5px;">inventory</div>
-                <h2>Stock</h2>
-            </button>
-            <button class="tab-button card c4" onclick="changeTab(3)">
-              <div class="material-symbols-outlined" style="padding-right: 5px;">finance</div>
-                <h2>Finanzas</h2>
-            </button>
-          </div>
-        </element>
-
-        <div class="logout" style="border: 1px solid;">
-          <button class="tab-button card c1" onclick="changeTab(1)">
-            <div class="material-symbols-outlined">logout</div>
-            <h2>Cerrar Sesión</h2>
+  <main class="d-flex">
+    <nav class="p-3 m-0 flex-shrink-0 card c5 position-static navbar"><!-- Barra lateral -->
+      <div class="logo">
+        <a onclick="changeTab(0)" style="color: #0A4E65;">
+          C<label class="text" for="">uen</label>T<label class="text">as</label>
+        </a>
+      </div>
+      <hr>
+      <ul class="nav nav-pills flex-column mb-auto">
+        <li class="nav-item">
+          <button class="d-flex align-items-center btn card c1 t-btn n-btn" onclick="changeTab(0)">
+            <div class="material-symbols-outlined">home</div>
+            <p class="h3 text">Inicio</p>
           </button>
-        </div>
+        </li>
+        <li>
+          <button class="d-flex align-items-center btn card c3 t-btn n-btn" onclick="changeTab(1)">
+            <div class="material-symbols-outlined" style="">currency_exchange</div>
+            <p class="h3 text">Caja Registradora</p>
+          </button>
+        </li>
+        <li>
+          <button class="d-flex align-items-center btn card c2 t-btn n-btn" onclick="changeTab(2)">
+            <div class="material-symbols-outlined" style="">inventory</div>
+              <p class="h3 text">Stock</p>
+          </button>
+        </li>
+        <li>
+          <button class="d-flex align-items-center btn card c4 t-btn n-btn" onclick="changeTab(3)">
+            <div class="material-symbols-outlined" style="">finance</div>
+              <p class="h3 text">Finanzas</p>
+          </button>
+        </li>
+      </ul>
+      <hr>
+      <div class="dropdown p-1">
+        <a href="#" class="d-flex align-items-center link-body-emphasis text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+          <img src="https://github.com/mdo.png" alt="" width="32" height="32" class="rounded-circle me-2">
+          <strong class="text">mdo</strong>
+        </a>
+        <ul class="dropdown-menu text-small shadow c5">
+          <li><a class="dropdown-item" href="#">Settings</a></li>
+          <li><hr class="dropdown-divider"></li>
+          <li><a class="dropdown-item" href="#">Sign out</a></li>
+        </ul>
+      </div>
+    </nav>
+    
+    <div class="p-3 w-100 m-0 c5 card area minw">
+
+      <!-- Pagina Inicial --->
+      <section class="tab-content" id="contect0">
+
       </section>
 
-      <section class="box-total c5">
+      <!-- Caja Registradora --->
+      <section class="tab-content" id="content1">
+        <!-- Apertura de Caja --->
+        <div class="action open_closed c4"> 
+          <label>
+            <p class="h2 fw-bold">Abrir Caja</p> 
+          </label>
 
-        <section class="tab-content" id="contect0" style="display: block;">
-          hola
-        </section>
-
-        <section class="tab-content" id="content1">
-
-          <div class=" action open_closed c4 ">
-            <h2>Abrir Caja</h2>
-
-            <div >
-              <form class="box-form-2" style="display: flex; margin-top: 0px;">
-                <h2>Monto de apertura</h2>
-                <input type="text"  name="email" class="formulario">
-                <br>
-                <button type="submit" class="button-submit button-sales c3">
-                  <h2>Abrir</h2>
-                </button>
-              </form>
-            </div>
-
-          </div>
-
-
-         <div class="actions">
-            <div class="action c3" style="width: 100%;">
-              <h1>Ventas</h1>
-
-              <form class="box-form">
-                <h2>Nombre del producto</h2>
-                <input type="text"  name="email" class="formulario">
-
-                <div>
-                  <h2>Cantidad</h2>
-                  <input type="number" id="valor" name="valor" value="0" class="formulario">
-                  <br>
-                  <button type="button" class="button-sales c2" onclick="agregarValor(5)">
-                    <p class="p-button">+5</p>
-                  </button>
-                  <button type="button" class="button-sales c2" onclick="agregarValor(10)">
-                    <p class="p-button">
-                      +10
-                    </p>
-                  </button>
-
-                  <br>
-
-                  <button type="submit" class="button-submit button-sales c4">
-                    <h2>Registrar</h2>
-                  </button>
-                </div>
-              </form>
-            </div>
-
-            <div class=" action c1" style="width: 100%;">
-              <h1>Gastos</h1>
-
-              <form class="box-form-2">
-                <h2>Descripción del gasto</h2>
-                <input type="text"  name="email" class="formulario">
-
-                <h2>Cantidad gastada</h2>
-                <input type="text" id="monto" name="monto" placeholder="Ejemplo: 100000" class="formulario">
-                
-                <br>
-
-                <button type="submit" class="button-submit button-sales c4">
-                  <h2>Registrar</h2>
-                </button>
-              </form>
-            </div>
-         </div>
-
-          <div class=" action open_closed c2 ">
-            <h2>Cerrar Caja</h2>
-
-            <div class="php">
-              <h2>Balance</h2>
-              <p>Datos de Balance</p>
-            </div>
-
-            <div >
-              <button type="submit" class="button-submit button-sales c1">
-                <h2>Cerrar</h2>
-              </button>
-            </div>
-
-          </div>
-
-        </section>
-
-        <section class="tab-content" id="content2">
-          <h1>Stock</h1>
-          <div class="action c2 serch">
-            <div class=" action">
-              <div >
-                <form class="box-form-2" style="display: flex; margin-top: 0px;">
-                  <h2 style="padding-right: 5px;">Producto</h2>
-                  <input type="text"  name="email" class="formulario">
-                  <br>
-                  <button type="submit" class="button-submit button-sales c3">
-                    <h2>Abrir</h2>
-                  </button>
-                </form>
-              </div>
-  
-            </div>
-
-            <br>
-
-            <table>
-              <tr class="c4">
-                  <th>Cant. Actual</th>
-                  <th>Precio Unitario</th>
-                  <th>Total vendido</th>
-                  <th>Ganancias</th>
-                  <th>Numero Proveedor</th>
-              </tr>
-              <tr>
-                  <td>Fila 1, Celda 1</td>
-                  <td>Fila 1, Celda 2</td>
-                  <td>Fila 1, Celda 3</td>
-                  <td>Fila 1, Celda 4</td>
-                  <td>Fila 1, Celda 5</td>
-              </tr>
-            </table>
-          </div>
-
-          <br>
-
-          <div class="action c4">
-            <h1 style="margin-bottom: 20px;">Registrar Producto</h1>
-            <form action="">
-             <div style="display: flex; justify-content: space-between;">
-              <div style="display: block; width: 48%;">
-                <h2>Nombre</h2>
-                <input type="text" name="Producto" class="formulario" style="display: flex;">
-                
-                <h2>Cantidad</h2>
-                <input type="text" name="Producto" class="formulario" style="display: flex;">
-  
-               </div>
-  
-                <div style="display: block; width: 48%;">
-                  <h2>Precio Unitario</h2>
-                  <input type="text" name="Producto" class="formulario" style="display: flex;">
-  
-                  <h2>Numero Proveedor</h2>
-                  <input type="text" name="Producto" class="formulario" style="display: flex;">
-                 </div>
-              </div>
-
-              <button type="submit" class="button-submit button-sales c3">
-                <h2>Guardar</h2>
+          <div class="d-flex align-items-center">
+            <form class="d-inline-flex">
+              <label class="">
+                <p class="h1 me-1">$</p>
+              </label>
+              <input type="text" id="openBox" name="monto" class="formulario w-75 c5 ">
+              <button type="submit" onclick="validarNumero" class="t-btn btn m-1 c3 ws-10">
+                Abrir
               </button>
             </form>
           </div>
+        </div>
 
-        </section>
+        
+        <div class="">
+          <!-- Registro de Caja --->
+          <div class="action c3">
+            <p class="h1 fw-bold">Ventas</p>
 
-        <section class="tab-content c4" id="content3">
-          
-        </section>
+            <form>
+              <p class="h4 fw-bold">Nombre del producto</p>
+              <input type="text"  name="email" placeholder="Atenas-Stiker" class="formulario w-75 c5">
+
+              <p class="h4 fw-bold">Cantidad</p>
+              <input type="text" id="valor" name="valor" placeholder="0" class="formulario w-75 c5">
+                
+              <div class="align-items-center justify-content-center d-flex">
+                <button type="button" class="m-2 p-1 c2 t-btn btn ws-10" onclick="agregarValor(5)">
+                  <p class="h3 fw-bold p-0">+5</p>
+                </button>
+                <button type="button" class="m-2 p-1 c2 t-btn btn ws-10" onclick="agregarValor(10)">
+                  <p class="h3 fw-bold p-0">
+                    +10
+                  </p>
+                </button>
+              </div>
+
+              <button type="submit" class="w-10 m-1 p-2 c4 btn t-btn">
+                <p class="h3 fw-bold">Registrar</p>
+              </button>
+            </form>
+          </div>
+      
+
+          <!-- Registro de Gastos --->
+          <div class="action c1" style="">
+            <p class="h1 fw-bold">Gastos</p>
+
+            <form>
+              <p class="h4 fw-bold">Descripción del gasto</p>
+              <input type="text"  name="email" class="formulario w-75 c5">
+
+              <p class="h4 fw-bold">Cantidad gastada</p>
+              <input type="text" id="valor" name="valor" placeholder="0" class="formulario w-75 c5">
+
+
+              <button type="submit" class="mt-3 w-10 m-1 p-2 c4 btn t-btn">
+                <p class="h3 fw-bold">Registrar</p>
+              </button>
+              
+            </form>
+          </div>
+        </div>
+        
+
+        <!-- Cierre de Caja --->
+        <div class=" action open_closed c2">
+          <label>
+            <p class="h2 fw-bold">Cerrar Caja</p> 
+          </label>
+
+          <div class="">
+            <p>Balance</p>
+          </div>
+
+          <div class="d-flex align-items-center">
+            <form class="d-inline-flex">
+              <button type="submit" onclick="validarNumero" class="t-btn btn m-1 c1 ws-10">
+                Cerrar
+              </button>
+            </form>
+          </div>
+        </div>
       </section>
-  </section>
 
-  <footer class="footer">
-    <p>Derechos de autor © 2023. Todos los derechos reservados.</p>
+      <!-- Stock --->
+      <section class="tab-content" id="contect2">
+        <div class="action c2" id="stock">
+          <label class="h2 fw-bold">Inventario</label>
+
+          <button type="submit" class="mt-3 w-10 m-1 p-2 c4 btn t-btn" id="crear-producto">
+            <p class="h3 fw-bold">Nuevo producto</p>
+          </button>
+        </div>
+
+        <div class="f-np c3 action" id="formulario">
+          <label class="h2 fw-bold">
+            Agregar Producto
+          </label>
+          <form class="text-start" action="../php/agrgar-producto.php" method="post">
+
+              <p class="h5 mt-2 fw-bold">Nombre del Producto</p>
+              <input class="formulario c5" type="text" name="nombre" placeholder="Nombre">
+                
+              <p class="h5 mt-2 fw-bold">Cantidad Inicial</p>
+              <input class="formulario c5" type="text" name="cantidad" placeholder="Cantidad">
+              
+              <p class="h5 mt-2 fw-bold">Costo Unitario</p>
+              <input class="formulario c5" type="number" name="precio" placeholder="Costo">
+                
+              <p class="h5 mt-2 fw-bold">Precio Unitario</p>
+              <input class="mb-4 formulario c5" type="number" name="precio" placeholder="Precio">
+            
+            <p class="h6 mt-2 fw-bold">
+              Imagen del producto
+            </p>
+            <input class="mb-4 d-flex" type="file" name="imagen" placeholder="Imagen">
+
+            <div class="text-center">
+              <input class="btn t-btn c4" type="submit" value="Agregar" id="agregar-producto">
+            </div>
+          </form>
+        </div>
+      </section>
+
+      <section class="tab-content d-block" id="contect3">
+        <div class="action c4">
+          <p class="h2 fw-bold">
+            Finanzas
+          </p>
+
+          <div class="d-flex action c5 bg-white bg-opacity-50 m-2">
+            <!-- Gráfico lineal -->
+            <div class=""> 
+              <canvas id=""></canvas>
+            </div>
+  
+            <!-- Gráfico de pastel  -->
+            <div>
+  
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    <!-- place footer here -->
   </footer>
 
+  <!-- Bootstrap JavaScript Libraries -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+    integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+    integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
+  </script> 
+
+  <!-- Scripts Propio --> 
 
   <script>
-    /* Las diferentes funcionalidades de la pagina web*/
     const tabContents = document.querySelectorAll(".tab-content");
-  
+
     function changeTab(tabIndex) {
       tabContents.forEach(content => {
         content.style.display = "none";
       });
-  
+
+      tabContents[0].style.display="none";
       tabContents[tabIndex].style.display = "block";
+      document.getElementById("stock").style.display="block";
+      document.getElementById("formulario").style.display = "none";
     }
 
-    /*Opción para seleccionar productos registrados Stock*/
+    function validarNumero() {
+        // Obtener el valor del campo de entrada
+        var numero = document.getElementById("openBox").value;
 
+        // Verificar si el valor es un número y es mayor o igual a cero
+        if (!isNaN(numero) && parseFloat(numero) >= 0) {
+            // El valor es válido, no hacer nada o realizar otras acciones aquí
+        } else {
+            // Mostrar un mensaje de error y limpiar el campo
+            alert("Por favor, ingrese un número positivo.");
+            document.getElementById("openBox").value = "";
+        }
+      }
 
-    /* Valida lo ingresado en el formulario */
+      // Evento de clic del botón "Crear producto"
+      document.getElementById("crear-producto").onclick = function() {
+        // Muestra el formulario
+        document.getElementById("stock").style.display = "none";
+        document.getElementById("formulario").style.display = "block";
+      };
+
+      document.getElementById("agregar-producto").onclick = function() {
+        document.getElementById("stock").style.display = "block";
+        document.getElementById("formulario").style.display = "none";
+      }
 
     
+
   </script>
+
+  <script src="../js/Stock.js"></script>
+
 </body>
+
 </html>
