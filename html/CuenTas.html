@@ -1,22 +1,19 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html>
 
 <head>
   <title>📈CuenTas📉</title>
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
   <link rel="stylesheet" type="text/css" href="styles.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap" rel="stylesheet">
-
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&amp;display=swap" rel="stylesheet">
   <!-- Bootstrap CSS v5.2.1 -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
-
   <!-- Icon -->
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />    
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0">
   <link rel="stylesheet" href="../css/cuentas.css">
   <link rel="stylesheet" href="../php/agrgar-producto.php">
 </head>
@@ -25,12 +22,11 @@
   <header>
     <!-- place navbar here -->
   </header>
-
   <main class="d-flex">
-    <nav class="p-3 m-0 flex-shrink-0 card c5 position-static navbar"><!-- Barra lateral -->
+    <nav class="p-3 m-0 flex-shrink-0 card c5 position-static navbar">
+      <!-- Barra lateral -->
       <div class="logo">
-        <a onclick="changeTab(0)" style="color: #0A4E65;">
-          C<label class="text" for="">uen</label>T<label class="text">as</label>
+        <a onclick="changeTab(0)" style="color: #0A4E65;"> C<label class="text" for="">uen</label>T<label class="text">as</label>
         </a>
       </div>
       <hr>
@@ -44,19 +40,19 @@
         <li>
           <button class="d-flex align-items-center btn card c3 t-btn n-btn" onclick="changeTab(1)">
             <div class="material-symbols-outlined" style="">currency_exchange</div>
-            <p class="h3 text">Caja Registradora</p>
+            <p class="h3 text">Caja<br></p>
           </button>
         </li>
         <li>
           <button class="d-flex align-items-center btn card c2 t-btn n-btn" onclick="changeTab(2)">
             <div class="material-symbols-outlined" style="">inventory</div>
-              <p class="h3 text">Stock</p>
+            <p class="h3 text">Stock</p>
           </button>
         </li>
         <li>
           <button class="d-flex align-items-center btn card c4 t-btn n-btn" onclick="changeTab(3)">
             <div class="material-symbols-outlined" style="">finance</div>
-              <p class="h3 text">Finanzas</p>
+            <p class="h3 text">Finanzas</p>
           </button>
         </li>
       </ul>
@@ -68,189 +64,255 @@
         </a>
         <ul class="dropdown-menu text-small shadow c5">
           <li><a class="dropdown-item" href="#">Settings</a></li>
-          <li><hr class="dropdown-divider"></li>
+          <li>
+            <hr class="dropdown-divider">
+          </li>
           <li><a class="dropdown-item" href="#">Sign out</a></li>
         </ul>
       </div>
     </nav>
-    
     <div class="p-3 w-100 m-0 c5 card area minw">
-
       <!-- Pagina Inicial --->
       <section class="tab-content" id="contect0">
-
       </section>
+
 
       <!-- Caja Registradora --->
       <section class="tab-content" id="content1">
-        <!-- Apertura de Caja --->
-        <div class="action open_closed c4"> 
-          <label>
-            <p class="h2 fw-bold">Abrir Caja</p> 
-          </label>
 
+        <!-- Apertura de Caja --->
+        <div class="action open_closed c4">
+          <label>
+            <p class="h2 fw-bold">Abrir Caja</p>
+          </label>
+            
           <div class="d-flex align-items-center">
             <form class="d-inline-flex">
-              <label class="">
-                <p class="h1 me-1">$</p>
-              </label>
-              <input type="text" id="openBox" name="monto" class="formulario w-75 c5 ">
-              <button type="submit" onclick="validarNumero" class="t-btn btn m-1 c3 ws-10">
-                Abrir
-              </button>
+              <input  class="formulario w-75 c5 " placeholder="Ingresar monto" type="number" id="apertura">
+              <button type="button" onclick="abrirCaja()" class="t-btn btn m-1 c3 ws-10"> Abrir </button>
             </form>
           </div>
         </div>
 
-        
+        <!-- Actividades de Caja --->
         <div class="">
-          <!-- Registro de Caja --->
-          <div class="action c3">
+          <div class="action c3" style="">
             <p class="h1 fw-bold">Ventas</p>
-
-            <form>
-              <p class="h4 fw-bold">Nombre del producto</p>
-              <input type="text"  name="email" placeholder="Atenas-Stiker" class="formulario w-75 c5">
-
-              <p class="h4 fw-bold">Cantidad</p>
-              <input type="text" id="valor" name="valor" placeholder="0" class="formulario w-75 c5">
-                
-              <div class="align-items-center justify-content-center d-flex">
-                <button type="button" class="m-2 p-1 c2 t-btn btn ws-10" onclick="agregarValor(5)">
-                  <p class="h3 fw-bold p-0">+5</p>
-                </button>
-                <button type="button" class="m-2 p-1 c2 t-btn btn ws-10" onclick="agregarValor(10)">
-                  <p class="h3 fw-bold p-0">
-                    +10
-                  </p>
-                </button>
+            <div class="form-group d-flex align-items-center justify-content-between">
+              <div class="w-25">
+                <label class="h4 fw-bold">Código del Producto</label>
               </div>
-
-              <button type="submit" class="w-10 m-1 p-2 c4 btn t-btn">
-                <p class="h3 fw-bold">Registrar</p>
-              </button>
-            </form>
+              <div class="w-50">
+                <input type="text" id="codigoProducto" placeholder="Ingrese código del producto" class="formulario c5 w-100">
+              </div>
+              <div class="w-25">
+                <form>
+                  <button type="button" onclick="buscarProducto()" class="w-50 c4 btn t-btn p-1">
+                    <p class="h4 fw-bold m-2">Buscar</p>
+                  </button>
+                </form>
+              </div>
+            </div>
+            <div class="row m-2 d-flex justify-content-center align-items-center">
+              <div class="col-md-4">
+                <p class="h4 fw-bold">Nombre</p>
+              </div>
+              <div class="col-md-4">
+                <p class="h4 fw-bold">Cantidad</p>
+              </div>
+              <div class="col-md-4">
+                <p class="h4 fw-bold">Valor</p>
+              </div>
+            </div>
+            <div class="row m-2 border rounded" style="">
+              <div class="col-md-4">          
+              <input type="text" id="nombreProducto" placeholder="Nombre del producto" readonly class="formulario c5 w-100">
+              </div>
+              <div class="col-md-4">
+                <input type="number" id="cantidad" placeholder="Ingrese cantidad" class="formulario c5 w-100">
+              </div>
+              <div class="col-md-4">
+                <input type="number" id="valor" placeholder="Ingrese valor" readonly class="formulario c5 w-100">
+              </div>
+            </div>
+            <button type="button" class="p-2 c4 btn t-btn w-50">
+              <p onclick="registrarIngreso()"" class="h3 fw-bold">Registrar</p>
+            </button>
           </div>
-      
+
 
           <!-- Registro de Gastos --->
           <div class="action c1" style="">
             <p class="h1 fw-bold">Gastos</p>
-
-            <form>
-              <p class="h4 fw-bold">Descripción del gasto</p>
-              <input type="text"  name="email" class="formulario w-75 c5">
-
-              <p class="h4 fw-bold">Cantidad gastada</p>
-              <input type="text" id="valor" name="valor" placeholder="0" class="formulario w-75 c5">
-
-
-              <button type="submit" class="mt-3 w-10 m-1 p-2 c4 btn t-btn">
+            <form style="">
+              <div class="d-flex justify-content-between">
+                <p class="h4 fw-bold w-50">Descripción del gasto</p>
+                <input type="text" id="descripcionGasto" placeholder="Ingrese descripción del gasto" class="formulario w-75 c5">
+              </div>
+              <div class="d-flex justify-content-between mt-2">
+                <p class="h4 fw-bold w-50">Cantidad gastada</p>
+                <input type="number" id="montoGasto" placeholder="Ingrese monto" class="formulario w-75 c5">
+              </div>
+              <button type="button" onclick="registrarGasto()" class="p-2 c4 btn t-btn w-50 mt-2">
                 <p class="h3 fw-bold">Registrar</p>
               </button>
-              
             </form>
           </div>
         </div>
-        
 
         <!-- Cierre de Caja --->
         <div class=" action open_closed c2">
           <label>
-            <p class="h2 fw-bold">Cerrar Caja</p> 
+            <p class="h2 fw-bold">Balance</p>
           </label>
-
           <div class="">
-            <p>Balance</p>
+            <p id="balance" class="h3 d-flex justify-content-center align-content-center">$0,000</p>
+            <!--- En este espacio coloca lo que saques del balance general--->
           </div>
-
           <div class="d-flex align-items-center">
             <form class="d-inline-flex">
-              <button type="submit" onclick="validarNumero" class="t-btn btn m-1 c1 ws-10">
-                Cerrar
+              <button type="submit" onclick="cerrarCaja()" class="t-btn btn m-0 c1">
+                <p class="h3 fw-bold"> Cerrar </p>
               </button>
             </form>
           </div>
         </div>
+
       </section>
 
+
       <!-- Stock --->
-      <section class="tab-content" id="contect2">
+      <section class="tab-content d-block" id="contect2" style="">
         <div class="action c2" id="stock">
           <label class="h2 fw-bold">Inventario</label>
 
-          <button type="submit" class="mt-3 w-10 m-1 p-2 c4 btn t-btn" id="crear-producto">
-            <p class="h3 fw-bold">Nuevo producto</p>
-          </button>
+          <section class="container">
+            <div id="listadoProductos"></div>
+          </section>
+
+          <div class="d-flex">
+            <button type="button" class="mt-3 w-10 m-1 p-2 c4 btn t-btn" id="crear-producto">
+              <p class="h3 fw-bold">Nuevo producto</p>
+            </button>
+  
+            <button type="button" class="mt-3 w-10 m-1 p-2 c4 btn t-btn" id="comprar-mas-producto">
+              <p class="h3 fw-bold">Compras</p>
+            </button>
+          </div>
         </div>
 
-        <div class="f-np c3 action" id="formulario">
-          <label class="h2 fw-bold">
-            Agregar Producto
-          </label>
-          <form class="text-start" action="../php/agrgar-producto.php" method="post">
-
-              <p class="h5 mt-2 fw-bold">Nombre del Producto</p>
-              <input class="formulario c5" type="text" name="nombre" placeholder="Nombre">
-                
-              <p class="h5 mt-2 fw-bold">Cantidad Inicial</p>
-              <input class="formulario c5" type="text" name="cantidad" placeholder="Cantidad">
-              
-              <p class="h5 mt-2 fw-bold">Costo Unitario</p>
-              <input class="formulario c5" type="number" name="precio" placeholder="Costo">
-                
-              <p class="h5 mt-2 fw-bold">Precio Unitario</p>
-              <input class="mb-4 formulario c5" type="number" name="precio" placeholder="Precio">
+        <div class="f-np c3 action" id="formulario1" style="">
+          <label class="h1 fw-bold mb-4"> Agregar Producto </label>
+          <form class="text-start" action="">
             
-            <p class="h6 mt-2 fw-bold">
-              Imagen del producto
-            </p>
-            <input class="mb-4 d-flex" type="file" name="imagen" placeholder="Imagen">
+            <div class="d-flex justify-content-between mt-2">
+              <p class="h3 mt-2 fw-bold w-50">Código del Producto</p>
+              <input type="text" id="codigoProducto" placeholder="Ingrese código del producto" class="formulario c5 w-75">
+            </div>
 
+            <div class="d-flex justify-content-between mt-2">
+              <p class="h3 mt-2 fw-bold w-50">Nombre del Producto</p>
+              <input type="text" id="nombreProducto" placeholder="Ingrese nombre del producto" class="formulario c5 w-75">
+            </div>
+
+            <div class="d-flex justify-content-between mt-2">
+              <p class="h3 mt-2 fw-bold w-50">Costo</p>
+              <input type="number" id="costo" placeholder="Ingrese costo" class="formulario c5 w-75">
+            </div>
+            
+            <div class="d-flex justify-content-between mt-2">
+              <p class="h3 mt-2 fw-bold w-50">Precio de Venta</p>
+              <input type="number" id="precioVenta" placeholder="Ingrese precio de venta" class="formulario c5 w-75">
+            </div>
+            
+            <div class="d-flex justify-content-between mt-2">
+              <p class="h3 mt-2 fw-bold w-50">Existencia Inicial</p>
+              <input type="number" id="precioVenta" placeholder="Ingrese precio de venta" class="mb-4 formulario c5 w-75">
+            </div>
+            
             <div class="text-center">
-              <input class="btn t-btn c4" type="submit" value="Agregar" id="agregar-producto">
+              <button type="button" onclick="registrarProducto()" id="agregarproductobtn" class="mt-3 w-50 m-1 p-2 c4 btn t-btn">
+                <p class="h3 fw-bold">Agregar</p>  
+              </button>
             </div>
           </form>
         </div>
+
+        <div class="f-np c4 action" id="formulario2" style="">
+          <label class="h1 fw-bold mb-4"> Compra de Producto </label>
+          <form class="text-start" action="">
+            
+            <div class="d-flex justify-content-between mt-2">
+              <p class="h3 mt-2 fw-bold w-50">Código del Producto</p>
+              <input type="text" id="codigoProducto" placeholder="Ingrese código del producto" class="formulario c5 w-75">
+            </div>
+
+            <div class="d-flex justify-content-center mt-2">
+              <button type="button" onclick="buscarProducto()" class="btn t-btn w-25 m-1 c3">
+                <p class="h2 fw-bold">
+                  Buscar
+                </p>
+              </button>
+            </div>
+            
+            <hr>
+
+            <div class="d-flex justify-content-between mt-2">
+              <p class="h3 mt-2 fw-bold w-50">Nombre del Producto</p>
+              <input type="text" id="nombreProducto" placeholder="Ingrese nombre del producto" class="formulario c5 w-75" readonly>
+            </div>
+
+            <div class="d-flex justify-content-between mt-2">
+              <p class="h3 mt-2 fw-bold w-50">Costo</p>
+              <input type="number" id="costo" placeholder="Ingrese costo" class="formulario c5 w-75" readonly>
+            </div>
+            
+            <div class="d-flex justify-content-between mt-2">
+              <p class="h3 mt-2 fw-bold w-50">Unidades Compradas</p>
+              <input type="number" id="unidadesCompradas" placeholder="Ingrese unidades compradas" class="formulario c5 w-75">
+            </div>
+            
+            <hr>
+
+            <div class="text-center">
+              <button type="button" id="Registarcomprabtn" onclick="registrarProducto()" class="mt-3 w-50 m-1 p-2 c3 btn t-btn">
+                <p class="h3 fw-bold">Registrar Compras</p>  
+              </button>
+            </div>
+          </form>
+        </div>
+
       </section>
 
-      <section class="tab-content d-block" id="contect3">
-        <div class="action c4">
-          <p class="h2 fw-bold">
-            Finanzas
-          </p>
 
+      <!-- Finanzas y Gráficos -->
+      <section class="tab-content" id="contect3">
+        <div class="action c4">
+          <p class="h2 fw-bold"> Finanzas </p>
           <div class="d-flex action c5 bg-white bg-opacity-50 m-2">
             <!-- Gráfico lineal -->
-            <div class=""> 
-              <canvas id=""></canvas>
+            <div class="">
+              <canvas></canvas>
             </div>
-  
             <!-- Gráfico de pastel  -->
             <div>
-  
             </div>
           </div>
         </div>
       </section>
     </div>
   </main>
-
   <footer>
     <!-- place footer here -->
   </footer>
-
+  
   <!-- Bootstrap JavaScript Libraries -->
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
-    integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js" integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
   </script>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
-    integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
-  </script> 
-
-  <!-- Scripts Propio --> 
-
+  <!-- Scripts Propio -->
   <script>
     const tabContents = document.querySelectorAll(".tab-content");
 
@@ -258,45 +320,35 @@
       tabContents.forEach(content => {
         content.style.display = "none";
       });
-
-      tabContents[0].style.display="none";
+      tabContents[0].style.display = "none";
       tabContents[tabIndex].style.display = "block";
-      document.getElementById("stock").style.display="block";
+      document.getElementById("stock").style.display = "block";
       document.getElementById("formulario").style.display = "none";
     }
 
-    function validarNumero() {
-        // Obtener el valor del campo de entrada
-        var numero = document.getElementById("openBox").value;
+    // Evento de clic del botón "Crear producto"
+    document.getElementById("crear-producto").onclick = function() {
+      // Muestra el formulario
+      document.getElementById("formulario1").style.display = "block";
+    };
 
-        // Verificar si el valor es un número y es mayor o igual a cero
-        if (!isNaN(numero) && parseFloat(numero) >= 0) {
-            // El valor es válido, no hacer nada o realizar otras acciones aquí
-        } else {
-            // Mostrar un mensaje de error y limpiar el campo
-            alert("Por favor, ingrese un número positivo.");
-            document.getElementById("openBox").value = "";
-        }
-      }
+    document.getElementById("comprar-mas-producto").onclick = function() {
+      document.getElementById("formulario2").style.display = "block";
+    }
 
-      // Evento de clic del botón "Crear producto"
-      document.getElementById("crear-producto").onclick = function() {
-        // Muestra el formulario
-        document.getElementById("stock").style.display = "none";
-        document.getElementById("formulario").style.display = "block";
-      };
+    document.getElementById("Registarcomprabtn").onclick = function(){
+      document.getElementById("formulario2").style.display = "none";
+    }
 
-      document.getElementById("agregar-producto").onclick = function() {
-        document.getElementById("stock").style.display = "block";
-        document.getElementById("formulario").style.display = "none";
-      }
-
-    
-
+    document.getElementById("agregarproductobtn").onclick = function(){
+      document.getElementById("formulario1").style.display = "none";
+    }
   </script>
 
-  <script src="../js/Stock.js"></script>
-
+  <script src="../js/caja.js"></script>
+  <script src="../js/compras.js"></script>
+  <script src="../js/listaProductos.js"></script>
+  <script src="../js/registar_producto.js"></script>
 </body>
 
 </html>

@@ -42,6 +42,10 @@ td {
   padding: 2px;
 }
 
+.w-30{
+  width: 30%;
+}
+
 /* Estilos de la barra lateral */
 .area {
   display: flex;
@@ -184,7 +188,7 @@ td {
 }
 
 /* Estilos para pantallas móviles */
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 900px) {
   .navbar {
     padding: 0px !important;
     width: min-content;
