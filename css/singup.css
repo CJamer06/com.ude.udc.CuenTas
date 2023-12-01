@@ -160,17 +160,8 @@
 
   /******************Cards******************/
   .card {
-    padding-block: 3.3rem;
-    margin: 10px 5px 5px 5px;
+    margin: 20px 5px 5px 5px;
     border-radius: 10px;
-  }
-
-  .cards-box {
-    padding: 5px;
-    width: 50%;
-    display: inline-block;
-    justify-content: center;
-    align-items: center;
   }
 
   .text {
