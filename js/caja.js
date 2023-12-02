@@ -12,7 +12,7 @@ function abrirCaja() {
 function buscarProducto() {
     const codigoProducto = document.getElementById('codigoProducto').value;
 
-    const urlPhp1 = '../php/Caja/buscarCodigo.php';
+    const urlPhp1 = 'http://localhost/php/Caja/buscarCodigo.php';
 
     fetch(`${urlPhp1}?codigo=${codigoProducto}`)
         .then(response => response.json())

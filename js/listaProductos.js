@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', cargarListadoProductos);
 
 function cargarListadoProductos() {
-    const urlPhp1 = '../php/Stock/obtenerProductos.php';
+    const urlPhp1 = 'http://localhost/php/Stock/obtenerProductos.php';
     fetch(urlPhp1)
         .then(response => response.json())
         .then(data => {
