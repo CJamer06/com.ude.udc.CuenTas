@@ -42,6 +42,14 @@ td {
   padding: 2px;
 }
 
+#contect0 {
+  display: block;
+}
+
+.w-20{
+  width: 20%;
+}
+
 .w-30{
   width: 30%;
 }
