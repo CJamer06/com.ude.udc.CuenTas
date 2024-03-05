@@ -13,6 +13,7 @@
   <!-- Bootstrap CSS v5.2.1 -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
 
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0">
   <link rel="stylesheet" href="css/style.css">
 
 </head>
@@ -41,46 +42,55 @@
     </nav>
   </header>
 
-  <main>
-    <section class="text-center m-2 p-5">
-      <p class="h1 fs-1 fw-bold mb-2">¡Bienvenido a CuenTas!</p>
-      <p class="h3 p-h">Tu aliado en contra de las malas finanzas</p>
+  <main class="">
+    <!-- Texto de Bienvenida -->
+    <section class="pt-5" id="textoBienvenida">
+      <p class="h1 d-flex justify-content-center fs-1 titulo" id = "titulo">
+        <strong>¡Bienvenido a CuenTas!</strong>
+      </p>
+      <p class="h3 d-flex justify-content-center p-1 subtitulo" id = "subtitulo" >Tu aliado en contra de las malas finanzas</p>
     </section>
 
-    <section class="card-box d-flex justify-content-center">
+    <!-- Cards de Ventajas -->
+    <section class = "p-3 cardBox" id="cardBox">
 
-      <div class="card c1 mb-3 m-1">
+      <div class="card c1">
         <p class="h2 mb-0 mt-4 fw-bold">Fácil</p>
         <div class="card-body h5">
           <p class="card-text">Olvídate de los complicados cálculos manuales y la dificultad para seguir el ritmo de las transiciones</p>
         </div>
       </div>
 
-      <div class="card c2 mb-3 m-1">
+      <div class="card c2">
         <p class="h2 mb-0 mt-4 fw-bold">Ágil</p>
         <div class="card-body">
           <p class="card-text h5">Registrar ventas y gastos ahora sera mucho mas rápido y eficiente</p>
         </div>
       </div>
 
-      <div class="card c3 mb-3 m-1">
+      <div class="card c3">
         <p class="h2 mb-0 mt-4 fw-bold">Autónomos</p>
         <div class="card-body h5">
           <p class="card-text">Despreocupa te de los procesos, genera informes detallados y tomar decisiones informadas con confianza</p>
         </div>
       </div>
-
     </section>
 
-    <section class="p-4 text-center" style="color: #009CC6">
-      <p class="fw-bold h2 " > 👉 Organiza tus cuentas y has crecer tu negocio 👈 </p>
+    <section class="text-center p-2 subtituloInferior" id="subtituloInferior">
+      <p class="fw-bold h2 texto" id="textoSubInfer"> 👉 Organiza tus cuentas y has crecer tu negocio 👈 </p>
     </section>
 
+    <section>
+      <div class="boxVolverArriba">
+        <button class="btn t-btn c4 pb-1 btnVolverArriba" id="btnVolverArriba" onclick="volverArriba()">
+          <div class="material-symbols-outlined">
+          <strong>keyboard_double_arrow_up</strong> 
+          </div>
+        </button>
+      </div>
+    </section>
   </main>
 
-  <footer class="">
-    
-  </footer>
 
   <!-- Bootstrap JavaScript Libraries -->
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
@@ -90,6 +100,8 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
     integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
   </script>
+
+  <script src="js/script.js"></script>
 </body>
 
 </html>

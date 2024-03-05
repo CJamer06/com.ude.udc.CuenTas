@@ -16,12 +16,14 @@
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
 	integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
 
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0">
+
 	<link rel="stylesheet" type="text/css" href="../css/style.css">
 </head>
 
 <body class="ms-1">
 	<header> <!-- Barra de navegación -->
-		<nav class="navbar navbar-expand-lg bg-body-tertiary c6">
+		<nav class="navbar c6 navbar-expand-lg bg-body-tertiary">
 			<div class="container-fluid">
 				<a class="navbar-brand" href="../index.html">
 					<p class="h2 fw-bold">CuenTas</p>
@@ -44,8 +46,10 @@
 
   <main>
 	<section class="text-center">
-		<p class="h1 fw-bold">
-			¿Quienes somos?
+		<p class="h1"> 
+			<strong>
+				¿Quienes somos?
+			</strong>	
 		</p>
 		<p>
 			Occaecat ea est nulla voluptate Lorem qui aliqua sint consequat quis quis. Voluptate officia Lorem pariatur enim occaecat aliquip sit. Eu commodo dolor minim labore enim. Lorem Lorem proident adipisicing commodo pariatur reprehenderit in dolore irure mollit. Occaecat ipsum excepteur ullamco aliqua aute pariatur sunt occaecat reprehenderit duis deserunt. In minim ullamco ut velit.
@@ -63,36 +67,43 @@
 		</p>
 		
 		<p class="h1 fw-bold">
-			Desarrolladores de CuenTas
+			Equipo de Desarrolladores
 		</p>
 	</section>
 
-	<section class="card-box d-flex justify-content-center">
-    <div class="card c1 mb-3 m-1">
-      <p class="h2 mb-0 mt-4 fw-bold text-center">Yuriana Cantillo Sabalza</p>
-      <div class="card-body h5">
-        <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores aliquid, expedita in nulla facilis quaerat itaque sed officia dolorum, corporis, labore dolor fugiat quibusdam quisquam ipsam laudantium reprehenderit. Dignissimos, commodi!</p>
-      </div>
-    </div>
+	<section class="cardBox">
+		<div class="card c1 mb-3 m-1">
+			<p class="h2 mb-0 mt-4 fw-bold text-center">Yuriana Cantillo Sabalza</p>
+			<div class="card-body h5">
+				<p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores aliquid, expedita in nulla facilis quaerat itaque sed officia dolorum, corporis, labore dolor fugiat quibusdam quisquam ipsam laudantium reprehenderit. Dignissimos, commodi!</p>
+			</div>
+		</div>
 
-    <div class="card c2 mb-3 m-1 text-center">
-      <p class="h2 mb-0 mt-4 fw-bold"> Miguel Jose Mejia Orozco</p>
-      <div class="card-body h5">
-        <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores aliquid, expedita in nulla facilis quaerat itaque sed officia dolorum, corporis, labore dolor fugiat quibusdam quisquam ipsam laudantium reprehenderit. Dignissimos, commodi!</p>
-      </div>
-    </div>
+		<div class="card c2 mb-3 m-1 text-center">
+			<p class="h2 mb-0 mt-4 fw-bold"> Miguel Jose Mejia Orozco</p>
+			<div class="card-body h5">
+				<p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores aliquid, expedita in nulla facilis quaerat itaque sed officia dolorum, corporis, labore dolor fugiat quibusdam quisquam ipsam laudantium reprehenderit. Dignissimos, commodi!</p>
+			</div>
+		</div>
 
-    <div class="card c3 mb-3 m-1 text-center">
-      <p class="h2 mb-0 mt-4 fw-bold"> Carlos Javier Amaranto Mercado</p>
-      <div class="card-body h5">
-        <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores aliquid, expedita in nulla facilis quaerat itaque sed officia dolorum, corporis, labore dolor fugiat quibusdam quisquam ipsam laudantium reprehenderit. Dignissimos, commodi!</p>
-      </div>
-    </div>
-	  </section>
+		<div class="card c3 mb-3 m-1 text-center">
+			<p class="h2 mb-0 mt-4 fw-bold"> Carlos Javier Amaranto Mercado</p>
+			<div class="card-body h5">
+				<p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores aliquid, expedita in nulla facilis quaerat itaque sed officia dolorum, corporis, labore dolor fugiat quibusdam quisquam ipsam laudantium reprehenderit. Dignissimos, commodi!</p>
+			</div>
+		</div>
+	</section>
+
+	<section>
+		<div class="boxVolverArriba">
+			<button class="btn t-btn c4 pb-1 btnVolverArriba" id="btnVolverArriba" onclick="volverArriba()">
+			  <div class="material-symbols-outlined">
+				<strong>keyboard_double_arrow_up</strong> 
+			  </div>
+			</button>
+		</div>
+	</section>
   </main>
-  <footer class="footer">
-	<p>Derechos de autor © 2023. Todos los derechos reservados.</p>
-  </footer>
 
   <!-- Bootstrap JavaScript Libraries -->
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
@@ -102,6 +113,8 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
 	integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
   </script>
+
+<script src="../js/script.js"></script>
 </body>
 
 </html>
