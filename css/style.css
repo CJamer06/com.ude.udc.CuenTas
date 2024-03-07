@@ -1,0 +1,85 @@
+:root{
+	--c1 : #F05176;
+	--c2 : #FF8100;
+	--c3 : #00C555;
+	--c4 : #009CC6;
+	--c5 : #0A4E65;
+	--c6 : #B0B0B0;
+
+	--tc1 : #F051763D;
+	--tc2 : #FF81003D;
+	--tc3 : #00C5553D;
+	--tc4 : #009CC63D;
+	--tc6 : #80808089;
+}
+
+body {
+padding: 0;
+font-family: 'Bree Serif', Arial, Helvetica, sans-serif ;
+background-color: white;
+min-width: 420px;
+min-height: 40rem;
+}
+
+/* COLORES */
+
+.c1{
+color: var(--c1);
+border: 1px var(--tc1) solid;
+border-bottom: 5px var(--tc1) solid;
+background-color: #FBE3E8;
+}
+
+.c2{
+color: var(--c2);
+border: 1px var(--tc2) solid;
+border-bottom: 5px var(--tc2) solid;
+background-color: #FDEEDF;
+}
+
+.c3{
+color: var(--c3);
+border: 1px var(--tc3) solid;
+border-bottom: 5px var(--tc3) solid;
+background-color: #E5F9EE;
+}
+
+.c4 {
+color: var(--c4);
+border: 1px var(--tc4) solid;
+background-color: #bbf0ff;
+border-bottom: 5px var(--tc4) solid;
+}
+
+.c5{
+color: white;
+border: 1px var(--c4) solid;
+border-bottom: 5px var(--c4) solid;
+background-color: var(--c5);
+}
+
+.c6{
+color: black;
+border: 1px var(--tc6) solid;
+border-bottom: 5px var(--tc6) solid;
+background-color: #fff ;
+}
+
+/* --- HOVERS --- */
+
+.t-btn:hover{
+color: white !important ;
+border: 1px solid var(--c4) !important ;
+background-color: var(--c5) !important ;
+border-bottom: 5px solid var(--c4) !important ;
+transition: all 1s;
+}
+
+/* --- CARDS --- */
+
+.card{ 
+display: flex;
+justify-content: center;
+align-items: center;
+max-width: 30%;
+}
