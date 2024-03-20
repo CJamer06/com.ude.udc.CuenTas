@@ -1,26 +1,148 @@
 :root{
 	--c1 : #F05176;
 	--c2 : #FF8100;
-	--c3 : #00C555;
+	--c3 : #00B74F;
 	--c4 : #009CC6;
 	--c5 : #0A4E65;
 	--c6 : #B0B0B0;
 
 	--tc1 : #F051763D;
 	--tc2 : #FF81003D;
-	--tc3 : #00C5553D;
+	--tc3 : #00B74F3D;
 	--tc4 : #009CC63D;
 	--tc6 : #80808089;
 }
 
 body {
-padding: 0;
-font-family: 'Bree Serif', Arial, Helvetica, sans-serif ;
-background-color: white;
-min-width: 420px;
-min-height: 40rem;
+	padding: 0;
+	font-family: 'Bree Serif', Arial, Helvetica, sans-serif ;
+	background-color: white;
+	min-width: 420px;
+	min-height: 40rem;
 }
 
+li{
+    border: solid;
+    list-style: none;
+    margin: 5px;
+}
+
+ul{
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
+}
+
+/* AREAS DE TRABAJO */
+
+.cabezaPagina{
+    display: flex;
+    padding-right: 10px;
+    padding-left: 10px;
+    border-radius: 15px;
+    justify-content: space-between;
+}
+
+.espacioBarNav{
+    margin: 5px;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+}
+
+.areaBienvenida , .areaInicioSesion{
+    border-radius: 15px;
+    padding: 15px;
+    margin: 10px 0 0 0;
+}
+
+.areaInicioSesion{
+    display: grid;
+    justify-content: center;
+}
+
+.areaFormulario{
+    display: grid;
+    padding: 0 20px 50px;
+}
+
+
+/* TEXTO */
+.tituloBarNav{
+    margin: 5px;
+    padding: 5px;
+    font-size: 40px;
+    color: #000000;
+    text-align: left;
+    font-style: normal;
+    font-weight: bolder;	
+}
+
+.tituloBienvenida, .tituloInicioSesion{
+    font-size: 50px;
+    font-weight: 600;
+    margin-bottom: 0;
+}
+
+.textoBienvenida, .textoInicioSesion{
+
+    margin: 10px;
+    padding: 0;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+}
+
+.subtituloBienvenida{
+    display: grid;
+    font-size: large;
+    justify-content: center;
+}
+
+.subtituloInferior{
+    display: grid;
+    font-size:x-large;
+    justify-content: center;
+}
+
+.textoInicioSesion{
+    font-weight: 600; 
+}
+
+
+/* ACCESORIOS */
+
+.boton{
+    padding: 10px;
+    cursor:pointer;
+    font-size:medium;
+    border-radius: 5px;
+}
+
+button{
+    font-family: 'Bree Serif', Arial, Helvetica, sans-serif ;
+}
+
+.formulario{
+    padding: 10px;
+    border-radius: 5px;
+    align-items: center;
+    font-family: 'Bree Serif', Arial, Helvetica, sans-serif ;
+    font-size: large;
+}
+
+.areaFormularioPassword{
+    display: flex;
+}
+
+.formularioPassword{
+    width: 100%;
+}
+
+.areaGeneralFormulario{
+    width: 500px;
+}
 /* COLORES */
 
 .c1{
@@ -59,27 +181,44 @@ background-color: var(--c5);
 }
 
 .c6{
-color: black;
-border: 1px var(--tc6) solid;
-border-bottom: 5px var(--tc6) solid;
-background-color: #fff ;
+    color: black;
+    border: 1px var(--tc6) solid;
+    border-bottom: 5px var(--tc6) solid;
+    background-color: #fff;
 }
+
+
 
 /* --- HOVERS --- */
 
-.t-btn:hover{
-color: white !important ;
-border: 1px solid var(--c4) !important ;
-background-color: var(--c5) !important ;
-border-bottom: 5px solid var(--c4) !important ;
-transition: all 1s;
+.botonTransicion:hover{
+    color: white !important ;
+    border: 1px solid var(--c4) !important ;
+    background-color: var(--c5) !important ;
+    border-bottom: 5px solid var(--c4) !important ;
+    transition: all 0.5s;
+}
+
+/* ACTIVERS */
+.botonTransicion:active{
+    border: 1px solid var(--c4) !important ;
+    background-color: var(--c4) !important ;
+    border-bottom: 0px solid var(--tc4) !important ;
+    transition: all 0.3s;
 }
 
 /* --- CARDS --- */
 
-.card{ 
-display: flex;
-justify-content: center;
-align-items: center;
-max-width: 30%;
+.card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 30%;
+    margin-left: 0px;
+}
+
+::placeholder{
+    font-size:large;
+    color: #000000;
+    font-family: 'Bree Serif', Arial, Helvetica, sans-serif ;
 }

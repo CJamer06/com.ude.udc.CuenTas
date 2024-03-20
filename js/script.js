@@ -21,8 +21,8 @@ function volverArriba() {
 }
 
 function togglePasswordVisibility() {
-    var iconoVisibilidad = document.getElementById("iconoVisibilidad");
-    var visibilidadTexto = document.getElementById("ingresarContraseña");
+    var iconoVisibilidad = document.getElementById("IconoVisibilidad");
+    var visibilidadTexto = document.getElementById("FormularioPassword");
     const cambioIcono = iconoVisibilidad.innerText;
 
     console.log(cambioIcono);
